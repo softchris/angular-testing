@@ -10,11 +10,7 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'app works!';
   description = 'description';
-  constructor(service: AppService, jediService: JediService) {
-    jediService.getPerson().subscribe( data => {
-      console.log(data);
-    })
-    //service.getData().then( 
-    //  data => this.title = data);
+  constructor(service: AppService) {
+   
   }
 }

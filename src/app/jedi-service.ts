@@ -1,15 +1,20 @@
+import { HttpClient } from '@angular/common/http';
 import { Http } from '@angular/http';
 import { Injectable } from '@angular/core';
-import "rxjs/add/operator/map";
 
 @Injectable()
 export class JediService {
   apiUrl: string = 'something';
 
-  constructor(private http: Http, ) {}
+  constructor(private http: HttpClient ) {}
 
   getJedis() {
-    return this.http.get(`${this.apiUrl}/jedis`)
-                    .map(res => res.json().data);
+    return this.http.get(`/api/jedis`);
+  }
+
+  getJedi(id) {
+    let route = `/api/jedis/${id}`;
+    console.log('route',route);
+    return this.http.get(route);
   }
 }

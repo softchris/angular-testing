@@ -1,3 +1,4 @@
+import { Jedi } from './jedi.model';
 import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 
 @Component({
@@ -13,8 +14,4 @@ export class JediComponent implements OnInit {
     constructor() { }
 
     ngOnInit() { }
-}
-
-export class Jedi {
-    constructor(public name: string, public side: string) {}
 }

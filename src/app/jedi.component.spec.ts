@@ -1,6 +1,8 @@
+import { Jedi } from './jedi.model';
+import { JediService } from './jedi-service';
 import { By } from '@angular/platform-browser';
 import { ComponentFixture } from '@angular/core/testing/src/testing';
-import { Jedi, JediComponent } from './jedi.component';
+import { JediComponent } from './jedi.component';
 import { TestBed, async } from '@angular/core/testing';
 
 describe('jedi component', () => {
@@ -8,7 +10,7 @@ describe('jedi component', () => {
     var component;
     beforeEach(async(() => {
         TestBed.configureTestingModule({
-            declarations : [ JediComponent ]
+            declarations : [ JediService ]
         }).compileComponents();
     }))
 
